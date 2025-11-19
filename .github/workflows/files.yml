@@ -1,0 +1,21 @@
+name: Directory & File Manipulation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  file-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create directory
+        run: mkdir -p mydir
+
+      - name: Create text file in directory
+        run: echo "Dit is een testbestand voor exercise 1." > mydir/info.txt
+
+      - name: Show directory contents
+        run: ls -alh mydir
+
+      - name: Show file content
+        run: cat mydir/info.txt
